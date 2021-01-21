@@ -28,9 +28,9 @@
       </div>
 
       <div class="form">
-        <form>
+        <form name="form" onsubmit="return(validate())">
           <label for="title">Title *</label> <br />
-          <select id="title" name="title" required>
+          <select id="title" name="title">
             <option value="" selected>Select a Title</option>
             <option value="Sr">Sr</option>
             <option value="Ms">Ms</option>
@@ -42,7 +42,6 @@
             id="fname"
             name="fname"
             placeholder="First Name"
-            required
           />
 
           <label for="lname">Last Name *</label> <br />
@@ -51,7 +50,6 @@
             id="lname"
             name="lname"
             placeholder="Last Name"
-            required
           />
 
           <label for="email">Email *</label> <br />
@@ -60,7 +58,6 @@
             id="email"
             name="email"
             placeholder="Email"
-            required
           />
 
           <label for="country">Country</label> <br />
@@ -87,12 +84,11 @@
             id="city"
             name="city"
             placeholder="City"
-            required
           />
 
           <label for="preference">Would you like us to call you? *</label>
           <br />
-          <select id="preference" name="preference" required>
+          <select id="preference" name="preference">
             <option value="" selected>Select your Preference</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -103,7 +99,7 @@
 
           <label for="call">Best Time to Call *</label>
           <br />
-          <select id="call" name="call" required>
+          <select id="call" name="call">
             <option value="" selected>Select Best Time to Call</option>
             <option value="8">8am</option>
             <option value="9">9am</option>
@@ -113,7 +109,7 @@
 
           <label for="time">Time Zone*</label>
           <br />
-          <select id="time" name="time" required>
+          <select id="time" name="time">
             <option value="" selected>Time Zone</option>
             <option value="(UTC-5)">(UTC-5)</option>
             <option value="(UTC-6)">(UTC-6)</option>
@@ -123,7 +119,7 @@
 
           <label for="department">Department *</label>
           <br />
-          <select id="department" name="department" required>
+          <select id="department" name="department">
             <option value="" selected>Select Department</option>
             <option value="depa1">Department 1</option>
             <option value="depa2">Department 2</option>
@@ -138,7 +134,6 @@
             name="subject"
             rows="3"
             cols="30"
-            required
           ></textarea>
 
           <label for="message">Message *</label>
@@ -148,7 +143,6 @@
             name="message"
             rows="15"
             cols="30"
-            required
           ></textarea>
 
           <input
@@ -163,7 +157,6 @@
 
           <label for="wdate">Wedding Date *</label> <br />
           <input
-            required
             type="date"
             id="wdate"
             name="wdate"
@@ -173,5 +166,6 @@
         </form>
       </div>
     </div>
+    <script src="validation/validation.js"></script>
   </body>
 </html>
