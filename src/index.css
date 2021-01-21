@@ -1,7 +1,7 @@
 .container {
   text-align: center;
   width: 37%;
-  margin: 3rem auto;
+  margin: 2rem auto;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
@@ -16,7 +16,7 @@
 
 .header p {
   line-height: 2;
-  color: rgb(75, 196, 155);
+  color: #b1b1b1;
 }
 
 .header span {
@@ -33,24 +33,28 @@
   width: 102.8%;
   margin-top: 4px;
   margin-bottom: 2rem;
-  background-color: rgb(233, 227, 227);
+  border: 1px solid #ced4da;
+  background-color: #f3f3f3;
 }
 
 .form select:focus {
   outline: none;
+  border-color: #80bdff;
   background-color: #ccc;
 }
 
 .form input {
   padding: 0.5rem;
   width: 100%;
+  border: 1px solid #ced4da;
   margin-top: 4px;
   margin-bottom: 2rem;
-  background-color: rgb(233, 227, 227);
+  background-color: #f3f3f3;
 }
 
 .form input:focus {
   outline: none;
+  border-color: #80bdff;
   background-color: #ccc;
 }
 
@@ -58,11 +62,13 @@
   margin-top: 4px;
   margin-bottom: 2rem;
   width: 102.8%;
-  background-color: rgb(233, 227, 227);
+  border: 1px solid #ced4da;
+  background-color: #f3f3f3;
 }
 
 .form textarea:focus {
   outline: none;
+  border-color: #80bdff;
   background-color: #ccc;
 }
 
