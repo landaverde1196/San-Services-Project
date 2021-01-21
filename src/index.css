@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+  width: 50%;
+  margin: 3rem 25rem;
+}
+
+.header {
+  text-align: left;
+}
+
+.header p {
+  line-height: 2;
+  color: rgb(75, 196, 155);
+}
+
+.header span {
+  font-weight: bolder;
+  color: black;
+}
