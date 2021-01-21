@@ -1,11 +1,17 @@
 .container {
   text-align: center;
   width: 50%;
-  margin: 3rem 25rem;
+  margin: 3rem auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
 .header {
   text-align: left;
+}
+
+.header h1 {
+  font-weight: 600;
 }
 
 .header p {
@@ -14,6 +20,76 @@
 }
 
 .header span {
-  font-weight: bolder;
+  font-weight: bold;
   color: black;
+}
+
+.form {
+  text-align: left;
+}
+
+.form select {
+  padding: 0.5rem;
+  width: 102.8%;
+  margin-top: 4px;
+  margin-bottom: 2rem;
+  background-color: rgb(233, 227, 227);
+}
+
+.form select:focus {
+  outline: none;
+  background-color: #ccc;
+}
+
+.form input {
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 2rem;
+  background-color: rgb(233, 227, 227);
+}
+
+.form input:focus {
+  outline: none;
+  background-color: #ccc;
+}
+
+.form textarea {
+  margin-top: 4px;
+  margin-bottom: 2rem;
+  width: 102.8%;
+  background-color: rgb(233, 227, 227);
+}
+
+.form textarea:focus {
+  outline: none;
+  background-color: #ccc;
+}
+
+.checkbox {
+  width: 5% !important;
+  cursor: pointer;
+}
+
+.button {
+  text-align: center;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ff0055;
+  border-radius: 4px;
+  background: #ff0055;
+  color: white;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover,
+.button:active {
+  color: white;
+  background: #ff4382;
+  border-color: #ff4382;
 }

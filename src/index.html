@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Contact</title>
   </head>
 
@@ -19,6 +25,158 @@
           do so. <br />
           <span>*REQUIRED FIELD</span>
         </p>
+      </div>
+
+      <div class="form">
+        <form>
+          <label for="title">Title *</label> <br />
+          <select id="title" name="title" required>
+            <option value="" selected>Select a Title</option>
+            <option value="Sr">Sr</option>
+            <option value="Ms">Ms</option>
+          </select>
+
+          <label for="fname">First Name *</label> <br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First Name"
+            required
+          />
+
+          <label for="lname">Last Name *</label> <br />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last Name"
+            required
+          />
+
+          <label for="email">Email *</label> <br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+
+          <label for="country">Country *</label> <br />
+          <select id="country" name="country" required>
+            <option value="" selected>Select a Country</option>
+            <option value="Honduras">Honduras</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="Canada">Canada</option>
+          </select>
+
+          <label for="state">State *</label> <br />
+          <select id="state" name="state" required>
+            <option value="" selected>Select a State</option>
+            <option value="State1">State1</option>
+            <option value="State2">State2</option>
+            <option value="State3">State3</option>
+            <option value="State4">State4</option>
+          </select>
+
+          <label for="city">City *</label> <br />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="City"
+            required
+          />
+
+          <label for="preference">Would you like us to call you? *</label>
+          <br />
+          <select id="preference" name="preference" required>
+            <option value="" selected>Select your Preference</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <label for="number">Phone Number *</label> <br />
+          <input
+            type="number"
+            id="number"
+            name="number"
+            placeholder="+1"
+            required
+          />
+
+          <label for="call">Best Time to Call *</label>
+          <br />
+          <select id="call" name="call" required>
+            <option value="" selected>Select Best Time to Call</option>
+            <option value="8">8am</option>
+            <option value="9">9am</option>
+            <option value="9">10am</option>
+            <option value="9">11am</option>
+          </select>
+
+          <label for="time">Time Zone*</label>
+          <br />
+          <select id="time" name="time" required>
+            <option value="" selected>Time Zone</option>
+            <option value="(UTC-5)">(UTC-5)</option>
+            <option value="(UTC-6)">(UTC-6)</option>
+            <option value="(UTC-7)">(UTC-7)</option>
+            <option value="(UTC-8)">(UTC-8)</option>
+          </select>
+
+          <label for="department">Department *</label>
+          <br />
+          <select id="department" name="department" required>
+            <option value="" selected>Select Department</option>
+            <option value="depa1">Department 1</option>
+            <option value="depa2">Department 2</option>
+            <option value="depa3">Department 3</option>
+            <option value="depa4">Department 4</option>
+          </select>
+
+          <label for="subject">Subject *</label>
+          <br />
+          <textarea
+            id="subject"
+            name="subject"
+            rows="3"
+            cols="30"
+            required
+          ></textarea>
+
+          <label for="message">Message *</label>
+          <br />
+          <textarea
+            id="message"
+            name="message"
+            rows="15"
+            cols="30"
+            required
+          ></textarea>
+
+          <input
+            class="checkbox"
+            type="checkbox"
+            id="wedding"
+            name="wedding"
+            value="wedding"
+          />
+          <label for="wedding"> I am planning a Wedding at the Resort</label
+          ><br />
+
+          <label for="wdate">Wedding Date *</label> <br />
+          <input
+            required
+            type="date"
+            id="wdate"
+            name="wdate"
+            value="yyyy-MM-dd"
+          />
+          <button class="button" type="submit">SUBMIT</button>
+        </form>
       </div>
     </div>
   </body>
