@@ -27,14 +27,14 @@ const loopElements = (element) => {
   let res = true;
   for (let a = 0; a < element.length; a++) {
     let msg = "";
-    if (element[a].name !== "input") {
-      msg = "Please provide a " + element[a].id + "!";
+    if (element[a].finder !== "input") {
+      msg = "Please provide a " + element[a].name + "!";
     } else if (element[a].id === "wdate") {
       msg = "Please provide a Date";
     } else if (element[a].id === "email" || validateEmail() === false) {
       msg = "Please provide a valid Email!";
     } else {
-      msg = "Please provide a " + element[a].placeholder + "!";
+      msg = "Please provide a " + element[a].name + "!";
     }
     res = validateEntry(element[a].id, msg);
     if (!res) break;
@@ -43,9 +43,9 @@ const loopElements = (element) => {
 };
 
 const validate = () => {
-  const inputs = document.getElementsByName("input");
-  const selects = document.getElementsByName("select");
-  const textareas = document.getElementsByName("textarea");
+  const inputs = document.getElementsByTagName("input");
+  const selects = document.getElementsByTagName("select");
+  const textareas = document.getElementsByTagName("textarea");
 
   const selectsArr = [...selects];
   const inputsArr = [...inputs];

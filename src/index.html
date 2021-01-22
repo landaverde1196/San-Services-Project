@@ -33,31 +33,44 @@
       <div class="form">
         <form name="form" onsubmit="return(validate())">
           <label for="title">Title *</label> <br />
-          <select id="title" name="select">
+          <select id="title" name="Title" finder="select">
             <option value="" selected>Select a Title</option>
             <option value="Sr">Sr</option>
             <option value="Ms">Ms</option>
           </select>
 
           <label for="fname">First Name *</label> <br />
-          <input type="text" id="fname" name="input" placeholder="First Name" />
+          <input
+            type="text"
+            id="fname"
+            name="First name"
+            placeholder="First Name"
+            finder="input"
+          />
 
           <label for="lname">Last Name *</label> <br />
-          <input type="text" id="lname" name="input" placeholder="Last Name" />
+          <input
+            type="text"
+            id="lname"
+            name="Last Name"
+            placeholder="Last Name"
+            finder="input"
+          />
 
           <label for="email">Email *</label> <br />
           <input
             type="email"
             id="email"
-            name="input"
+            name="E-mail"
             placeholder="Email"
             onkeydown="validateEmail()"
+            finder="input"
           />
           <span id="mail"></span>
           <br />
 
           <label for="country">Country</label> <br />
-          <select id="country" name="select">
+          <select id="country" name="country" finder="select">
             <option value="" selected>Select a Country</option>
             <option value="Honduras">Honduras</option>
             <option value="USA">USA</option>
@@ -66,7 +79,7 @@
           </select>
 
           <label for="state">State</label> <br />
-          <select id="state" name="select">
+          <select id="state" name="state" finder="select">
             <option value="" selected>Select a State</option>
             <option value="State1">State1</option>
             <option value="State2">State2</option>
@@ -75,22 +88,34 @@
           </select>
 
           <label for="city">City *</label> <br />
-          <input type="text" id="city" name="input" placeholder="City" />
+          <input
+            type="text"
+            id="city"
+            name="City"
+            placeholder="City"
+            finder="input"
+          />
 
           <label for="preference">Would you like us to call you? *</label>
           <br />
-          <select id="preference" name="select">
+          <select id="preference" name="Preference" finder="select">
             <option value="" selected>Select your Preference</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
 
           <label for="number">Phone Number</label> <br />
-          <input type="number" id="number" name="input" placeholder="+1" />
+          <input
+            type="number"
+            id="number"
+            name="number"
+            placeholder="+1"
+            finder="input"
+          />
 
           <label for="call">Best Time to Call *</label>
           <br />
-          <select id="call" name="select">
+          <select id="call" name="Call" finder="select">
             <option value="" selected>Select Best Time to Call</option>
             <option value="8">8am</option>
             <option value="9">9am</option>
@@ -100,7 +125,7 @@
 
           <label for="time">Time Zone*</label>
           <br />
-          <select id="time" name="select">
+          <select id="time" name="Time Zone" finder="select">
             <option value="" selected>Time Zone</option>
             <option value="(UTC-5)">(UTC-5)</option>
             <option value="(UTC-6)">(UTC-6)</option>
@@ -110,7 +135,7 @@
 
           <label for="department">Department *</label>
           <br />
-          <select id="department" name="select">
+          <select id="department" name="Department" finder="select">
             <option value="" selected>Select Department</option>
             <option value="depa1">Department 1</option>
             <option value="depa2">Department 2</option>
@@ -120,11 +145,23 @@
 
           <label for="subject">Subject *</label>
           <br />
-          <textarea id="subject" name="textarea" rows="3" cols="30"></textarea>
+          <textarea
+            id="subject"
+            name="Subject"
+            rows="3"
+            cols="30"
+            finder="text"
+          ></textarea>
 
           <label for="message">Message *</label>
           <br />
-          <textarea id="message" name="textarea" rows="15" cols="20"></textarea>
+          <textarea
+            id="message"
+            name="Message"
+            rows="15"
+            cols="20"
+            finder="text"
+          ></textarea>
 
           <div class="span">
             <span></span>
@@ -141,7 +178,7 @@
           ><br />
 
           <label for="wdate">Wedding Date *</label> <br />
-          <input type="date" id="wdate" name="input" value="yyyy-MM-dd" />
+          <input type="date" id="wdate" name="Wedding Date" finder="input" />
           <div class="bttn-div">
             <button class="button" type="submit">SUBMIT</button>
           </div>
