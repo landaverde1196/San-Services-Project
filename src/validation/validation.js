@@ -31,6 +31,8 @@ const loopElements = (element) => {
       msg = "Please provide a " + element[a].id + "!";
     } else if (element[a].id === "wdate") {
       msg = "Please provide a Date";
+    } else if (element[a].id === "email" || validateEmail() === false) {
+      msg = "Please provide a valid Email!";
     } else {
       msg = "Please provide a " + element[a].placeholder + "!";
     }
