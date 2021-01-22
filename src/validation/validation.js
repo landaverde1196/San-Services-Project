@@ -1,14 +1,30 @@
-const validateEmail = () => {
-  let emailID = document.form.email.value;
-  atpos = emailID.indexOf("@");
-  dotpos = emailID.lastIndexOf(".");
+// const validateEmail = () => {
+//   let emailID = document.form.email.value;
+//   atpos = emailID.indexOf("@");
+//   dotpos = emailID.lastIndexOf(".");
 
-  if (atpos < 1 || dotpos - atpos < 2) {
-    alert("Please enter correct email ID");
+//   if (atpos < 1 || dotpos - atpos < 2) {
+//     alert("Please enter correct email ID");
+//     document.form.email.focus();
+//     return false;
+//   }
+//   return true;
+// };
+
+const validateEmail = () => {
+  let emailValue = document.form.email.value;
+  let mailformat = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (emailValue.match(mailformat)) {
+    mail.innerHTML = "Your email is Valid";
+    mail.style.color = "green";
+    return true;
+  } else {
+    mail.innerHTML = "Please enter a valid email!";
+    mail.style.color = "red";
+    // alert("You have entered an invalid email address!");
     document.form.email.focus();
     return false;
   }
-  return true;
 };
 
 const validate = () => {

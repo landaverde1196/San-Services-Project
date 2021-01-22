@@ -58,6 +58,16 @@
   background-color: #ccc;
 }
 
+.form #email {
+  margin-bottom: 0;
+}
+
+.form #mail {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .form textarea {
   margin-top: 4px;
   margin-bottom: 2rem;

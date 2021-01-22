@@ -37,20 +37,10 @@
           </select>
 
           <label for="fname">First Name *</label> <br />
-          <input
-            type="text"
-            id="fname"
-            name="fname"
-            placeholder="First Name"
-          />
+          <input type="text" id="fname" name="fname" placeholder="First Name" />
 
           <label for="lname">Last Name *</label> <br />
-          <input
-            type="text"
-            id="lname"
-            name="lname"
-            placeholder="Last Name"
-          />
+          <input type="text" id="lname" name="lname" placeholder="Last Name" />
 
           <label for="email">Email *</label> <br />
           <input
@@ -58,7 +48,11 @@
             id="email"
             name="email"
             placeholder="Email"
+            onkeydown="validateEmail()"
+            required
           />
+          <span id="mail"></span>
+          <br />
 
           <label for="country">Country</label> <br />
           <select id="country" name="country">
@@ -79,12 +73,7 @@
           </select>
 
           <label for="city">City *</label> <br />
-          <input
-            type="text"
-            id="city"
-            name="city"
-            placeholder="City"
-          />
+          <input type="text" id="city" name="city" placeholder="City" />
 
           <label for="preference">Would you like us to call you? *</label>
           <br />
@@ -129,21 +118,11 @@
 
           <label for="subject">Subject *</label>
           <br />
-          <textarea
-            id="subject"
-            name="subject"
-            rows="3"
-            cols="30"
-          ></textarea>
+          <textarea id="subject" name="subject" rows="3" cols="30"></textarea>
 
           <label for="message">Message *</label>
           <br />
-          <textarea
-            id="message"
-            name="message"
-            rows="15"
-            cols="30"
-          ></textarea>
+          <textarea id="message" name="message" rows="15" cols="30"></textarea>
 
           <input
             class="checkbox"
@@ -156,13 +135,10 @@
           ><br />
 
           <label for="wdate">Wedding Date *</label> <br />
-          <input
-            type="date"
-            id="wdate"
-            name="wdate"
-            value="yyyy-MM-dd"
-          />
-          <button class="button" type="submit">SUBMIT</button>
+          <input type="date" id="wdate" name="wdate" value="yyyy-MM-dd" />
+          <button class="button" type="submit">
+            SUBMIT
+          </button>
         </form>
       </div>
     </div>
