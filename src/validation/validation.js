@@ -1,18 +1,5 @@
-// const validateEmail = () => {
-//   let emailID = document.form.email.value;
-//   atpos = emailID.indexOf("@");
-//   dotpos = emailID.lastIndexOf(".");
-
-//   if (atpos < 1 || dotpos - atpos < 2) {
-//     alert("Please enter correct email ID");
-//     document.form.email.focus();
-//     return false;
-//   }
-//   return true;
-// };
-
 const validateEmail = () => {
-  let emailValue = document.form.email.value;
+  let emailValue = document.getElementById("email").value;
   let mailformat = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (emailValue.match(mailformat)) {
     mail.innerHTML = "Your email is Valid";
@@ -21,71 +8,60 @@ const validateEmail = () => {
   } else {
     mail.innerHTML = "Please enter a valid email!";
     mail.style.color = "red";
-    // alert("You have entered an invalid email address!");
-    document.form.email.focus();
+    document.getElementById("email").focus();
     return false;
   }
 };
 
+const validateEntry = (elementId, message) => {
+  const element = document.getElementById(elementId);
+  if (element.value == "") {
+    alert(message);
+    element.focus();
+    return false;
+  }
+  return true;
+};
+
+const loopElements = (element) => {
+  let res = true;
+  for (let a = 0; a < element.length; a++) {
+    let msg = "";
+    if (element[a].name !== "input") {
+      msg = "Please provide a " + element[a].id + "!";
+    } else if (element[a].id === "wdate") {
+      msg = "Please provide a Date";
+    } else {
+      msg = "Please provide a " + element[a].placeholder + "!";
+    }
+    res = validateEntry(element[a].id, msg);
+    if (!res) break;
+  }
+  return res;
+};
+
 const validate = () => {
-  if (document.form.title.value == "") {
-    alert("Please select a Title!");
-    document.form.title.focus();
-    return false;
-  }
-  if (document.form.fname.value == "") {
-    alert("Please provide your name!");
-    document.form.fname.focus();
-    return false;
-  }
-  if (document.form.lname.value == "") {
-    alert("Please provide your Last Name!");
-    document.form.lname.focus();
-    return false;
-  }
-  if (document.form.email.value == "") {
-    alert("Please provide your Email!");
-    document.form.email.focus();
-    return false;
-  }
-  if (document.form.city.value == "") {
-    alert("Please provide a City!");
-    document.form.city.focus();
-    return false;
-  }
-  if (document.form.preference.value == "") {
-    alert("Please select a Preference!");
-    document.form.preference.focus();
-    return false;
-  }
-  if (document.form.call.value == "") {
-    alert("Please select Best Time to Call!");
-    document.form.call.focus();
-    return false;
-  }
-  if (document.form.time.value == "") {
-    alert("Please select your Time Zone!");
-    document.form.time.focus();
-    return false;
-  }
-  if (document.form.department.value == "") {
-    alert("Please select a Department!");
-    document.form.department.focus();
-    return false;
-  }
-  if (document.form.subject.value == "") {
-    alert("Please provide Subject!");
-    document.form.subject.focus();
-    return false;
-  }
-  if (document.form.message.value == "") {
-    alert("Please provide a Message!");
-    document.form.message.focus();
-    return false;
-  }
-  if (document.form.wdate.value == "") {
-    alert("Please select your Wedding Date!");
-    document.form.wdate.focus();
-    return false;
-  }
+  const inputs = document.getElementsByName("input");
+  const selects = document.getElementsByName("select");
+  const textareas = document.getElementsByName("textarea");
+
+  const selectsArr = [...selects];
+  const inputsArr = [...inputs];
+  const textAreasArr = [...textareas];
+
+  const ordered = [];
+  ordered.push(selectsArr.find((el) => el.id === "title"));
+  ordered.push(inputsArr.find((el) => el.id === "fname"));
+  ordered.push(inputsArr.find((el) => el.id === "lname"));
+  ordered.push(inputsArr.find((el) => el.id === "email"));
+  ordered.push(inputsArr.find((el) => el.id === "city"));
+  ordered.push(selectsArr.find((el) => el.id === "preference"));
+  ordered.push(selectsArr.find((el) => el.id === "call"));
+  ordered.push(selectsArr.find((el) => el.id === "time"));
+  ordered.push(selectsArr.find((el) => el.id === "department"));
+  ordered.push(textAreasArr.find((el) => el.id === "subject"));
+  ordered.push(textAreasArr.find((el) => el.id === "message"));
+  ordered.push(inputsArr.find((el) => el.id === "wdate"));
+
+  if (!loopElements(ordered)) return false;
 };
